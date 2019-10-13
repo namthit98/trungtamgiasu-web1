@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <title>Trang chủ</title>
+    <style>
+        :root {
+            --main-color: #2E9EE6;
+            --main-color-daker: #3793ce;
+            --second-color: #ffb100;
+
+            /* --main-color: #ff0000;
+            --main-color-daker: #eb4102;
+            --second-color: #ff4d00;    */
+        }
+
+        .hotline span {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .phone {
+            color: var(--main-color);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .my-nav.nav-pills .nav-link.active {
+            background: var(--main-color);
+            color: white !important
+        }
+
+        ul.my-nav li:hover {
+            background: var(--main-color);
+            border-radius: .25rem;
+        }
+
+        ul.my-nav li:hover>a {
+            color: white !important;
+        }
+
+        .button-wrapper {
+            background: var(--main-color);
+            color: white;
+            /* width: 100vw; */
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+
+        .button-wrapper .navbar-toggler {
+            outline: none;
+            color: white;
+            font-size: 14px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        nav.navbar {
+            padding-bottom: 0;
+        }
+
+        .banner {
+            overflow: hidden;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .navbar-collapse {
+            background: var(--main-color);
+            margin-top: -8px;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+
+        .navbar-collapse ul.my-nav li>a {
+            color: white !important;
+        }
+
+        .my-dropdown {
+            color: black;
+            cursor: pointer;
+            background: #F1F1F1;
+            margin-left: -8px;
+            border-radius: 0;
+            width: 100vw;
+            border: none;
+        }
+
+        .my-dropdown .title {
+            color: var(--main-color) !important;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .my-dropdown ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .my-dropdown.dropdown-menu ul li>a {
+            text-decoration: none;
+            color: black !important;
+        }
+
+        .my-dropdown.dropdown-menu ul li:hover a {
+            text-decoration: none;
+            color: var(--main-color) !important;
+        }
+
+        .my-dropdown ul li:hover {
+            color: var(--main-color);
+            background: transparent;
+        }
+
+        .navbar-light .navbar-nav .show>.nav-link {
+            background: var(--main-color);
+        }
+
+        .reason {
+            background: #F7F7F7;
+        }
+
+        .reason .highlight {
+            color: var(--main-color);
+        }
+
+        .one-reason i {
+            background: var(--main-color);
+            padding: 12px;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 15px;
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one-reason h4 {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .one-reason p {
+            text-align: justify;
+        }
+
+        .call-to-action a {
+            padding: 10px 30px;
+            background-color: var(--main-color);
+            border-radius: 30px;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 20px;
+            border: 1px solid var(--main-color);
+            box-shadow: 0 5px var(--main-color-daker);
+            display: inline-block;
+            transition: .4s;
+            text-decoration: none;
+        }
+
+        .call-to-action a:hover {
+            color: var(--main-color);
+            background-color: #fff;
+            box-shadow: none;
+            border: 1px solid var(--main-color);
+        }
+
+        .reason.khac-biet {
+            background: #fff;
+        }
+
+        .thu-ngo {
+            background: var(--main-color);
+        }
+
+        .thu-ngo .content {
+            color: white;
+        }
+
+        .thu-ngo .text {
+            border-left: 5px solid var(--second-color);
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        .thu-ngo .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+        }
+
+        .album .image-card {
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .item:hover .album-title {
+            top: 0;
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .album-title {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 100%;
+            padding: 0 15px 0 15px;
+            left: 0;
+            z-index: 1;
+            overflow: auto;
+            visibility: hidden;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .album-title h5 a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        footer {
+            background: #0B0900;
+            padding: 20px 0;
+        }
+
+        footer .footer-title {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-title h3 {
+            border-bottom: 1px solid #fff;
+            color: var(--second-color);
+            font-family: sfu_eurostilecondensed;
+            font-size: 15px;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        footer ul {
+            list-style: none;
+            color: #fff;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        ul#menu-footer-menu li {
+            float: left;
+            margin: 2px;
+        }
+
+        ul#menu-footer-menu li a {
+            color: #fff;
+            padding: 4px;
+            display: block;
+            background-color: var(--main-color);
+            text-decoration: none;
+            transition: .4s;
+        }
+
+        ul#menu-footer-menu li a:hover {
+            color: var(--main-color);
+            background-color: #fff;
+        }
+
+        .footer-social {
+            display: inline-block;
+            padding-top: 10px;
+        }
+
+        .footer-social ul {
+            list-style: none;
+        }
+
+        .footer-social li {
+            float: left;
+            padding-right: 10px;
+        }
+
+        .footer-social li a {
+            color: #fff;
+        }
+
+        .footer-social .fa {
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .fa-facebook {
+            padding: 12px 16px;
+            background-color: #2D5F9A;
+        }
+
+        .fa-youtube {
+            padding: 12px 13px;
+            background-color: #cc181e;
+        }
+
+        .fa-google-plus {
+            padding: 12px 9px;
+            background-color: #bd081c;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .copyright a {
+            color: var(--main-color);
+            text-decoration: none;
+        }
+
+        .alo-phone {
+            background-color: transparent;
+            bottom: 28px;
+            cursor: pointer;
+            height: 60px;
+            left: 30px;
+            position: fixed;
+            visibility: visible;
+            width: 60px;
+            z-index: 9999;
+        }
+
+        .alo-phone>span {
+            background: var(--second-color) none repeat scroll 0 0;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            left: -20px;
+            padding: 3px;
+            position: absolute;
+            top: 60px;
+            font-size: 12px;
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .animated.infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        .alo-ph-circle {
+            background-color: transparent;
+            border: 2px solid #00aff2;
+            border-radius: 100%;
+            height: 65px;
+            left: -7px;
+            opacity: 0.5;
+            position: absolute;
+            top: -7px;
+            width: 65px;
+        }
+
+        .alo-ph-circle-fill {
+            background-color: rgba(0, 175, 242, 0.5);
+            border: 2px solid transparent;
+            border-radius: 100%;
+            height: 50px;
+            left: 1px;
+            opacity: 0.75;
+            position: absolute;
+            top: 1px;
+            transition: all 0.5s ease 0s;
+            width: 50px;
+        }
+
+        .alo-ph-img-circle {
+            background: #00aff2 url("images/phone.png") no-repeat scroll center center;
+            border: 2px solid transparent;
+            border-radius: 100%;
+            height: 25px;
+            left: 13px;
+            opacity: 0.7;
+            position: absolute;
+            top: 13px;
+            transform-origin: 50% 50% 0;
+            transition: all 0.2s ease-in-out 0s;
+            width: 25px;
+        }
+
+        .zoomIn {
+            -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+        }
+
+        .pulse {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+        }
+
+        .tada {
+            -webkit-animation-name: tada;
+            animation-name: tada;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 1000px;
+            }
+
+            .navbar-brand {
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1000px;
+            }
+
+            .navbar-brand {
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .navbar-collapse {
+                background: transparent;
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .navbar-collapse ul.my-nav li>a {
+                color: black !important;
+            }
+
+            .navbar-collapse ul.my-nav li:hover>a {
+                color: white !important;
+            }
+
+            .my-dropdown.dropdown-menu ul li:hover>a {
+                text-decoration: none;
+                color: var(--main-color) !important;
+            }
+
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu:hover {
+                display: block;
+            }
+
+            .my-dropdown {
+                margin-top: 0;
+                width: 50rem;
+                left: -150%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+        <%- include('banner', {categories: categories, parentCategories: parentCategories, active: active}); %>
+
+
+    <!-- START BANNER -->
+    <div class="banner container-fluid">
+        <div class="row justify-content-center mt-lg-2">
+            <div class="col-12 col-lg-9">
+                <img class="img-fluid" src="http://giasutamduc.net/wp-content/uploads/2018/03/gs.png" alt="banner">
+            </div>
+        </div>
+    </div>
+    <!-- END BANNER -->
+
+
+    <!-- START MAIN -->
+    <main>
+        <section class="reason p-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h3><span class="highlight">VÌ SAO</span> BẠN NÊN CHỌN HỌC GIA SƯ DẠY TẠI NHÀ?</h3>
+                        <img class="img-fluid"
+                            src="http://giasutamduc.net/wp-content/themes/giasuhoangyen/images/arrow.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <i class="fa fa-thumbs-up"></i>
+                            <h4>1 CÔ - 1 TRÒ</h4>
+                            <p>Học 1 cô - 1 trò - 1 lộ trình hiệu quả hơn 80%: Cô sẽ dạy theo năng lực của học sinh -
+                                học đến đâu chắc đến đó.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <i class="fa fa-clock-o"></i>
+                            <h4>CHỦ ĐỘNG THỜI GIAN</h4>
+                            <p>Gia sư có thể đến dạy bất cứ lúc nào theo yêu cầu của bạn.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <h4>NHIỀU SỰ LỰA CHỌN</h4>
+                            <p>Gia sư là sinh viên kinh nghiệm hoặc giáo viên giỏi.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <i class="fa fa-leanpub"></i>
+                            <h4>GIAÓ ÁN CHUYÊN BIỆT</h4>
+                            <p>Dù con bạn có mất gốc, học cơ bản hay học nâng cao đều có giáo án riêng phù hợp với kiến
+                                thức của từng học sinh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="call-to-action text-center">
+                            <h5 class="mb-3">Gọi ngay để được tư vấn</h5>
+                            <a href="tel:0383070388">038.307.0388</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reason khac-biet p-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h3 style="text-transform: uppercase;"><span class="highlight">ĐIỂM KHÁC BIỆT</span> CỦA TRUNG TÂM GIA SƯ Quốc Tử Giám</h3>
+                        <img class="img-fluid"
+                            src="http://giasutamduc.net/wp-content/themes/giasuhoangyen/images/arrow.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <img src="http://giasutamduc.net/wp-content/uploads/2018/03/kb-1.png" alt="">
+                            <h4 class="mt-3">KIỂM TRA ĐẦU VÀO</h4>
+                            <p>Trước khi đến dạy con em bạn, đội ngũ gia sư Quốc Tử Giám đều trải qua những cuộc thi, kiểm
+                                tra đầu vào nghiêm ngặt để chọn ra những gia sư kinh nghiệm, tận tâm.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <img src="http://giasutamduc.net/wp-content/uploads/2018/03/kb-2.png" alt="">
+                            <h4 class="mt-3">NẮM BẮT TÂM LÝ</h4>
+                            <p>Kiến thức thôi chưa đủ, để dạy được học sinh, trước hết gia sư phải tạo cho học sinh niềm
+                                đam mê, yêu thích trong môn học.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <img src="http://giasutamduc.net/wp-content/uploads/2018/03/kb-3.png" alt="">
+                            <h4 class="mt-3">HỒ SƠ RÕ RÀNG</h4>
+                            <p>Duy nhất (chỉ có tại trung tâm gia sư Quốc Tử Giám): gia sư có hồ sơ rõ ràng gửi gia đình khi
+                                đến dạy.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="one-reason d-flex flex-column align-items-center">
+                            <img src="http://giasutamduc.net/wp-content/uploads/2018/03/kb-4.png" alt="">
+                            <h4 class="mt-3">HỌC THỬ 2 BUỔI</h4>
+                            <p>Có 2 buổi học thử, Gia sư sẽ kiểm tra năng lực học sinh từ đó sẽ có phương pháp giảng dạy
+                                phù hợp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="call-to-action text-center">
+                            <h5 class="mb-3">Gọi ngay để được tư vấn</h5>
+                            <a href="tel:0383070388">038.307.0388</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+        <section class="thu-ngo pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="image">
+                            <img class="img-fluid"
+                                src="http://giasutamduc.net/wp-content/themes/giasuhoangyen/images/teacher.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8 d-flex align-items-center">
+                        <div class="content d-flex flex-column align-items-center">
+                            <div class="title">
+                                Thư ngỏ
+                            </div>
+
+                            <div class="text">
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trung tâm gia sư thì nhiều, rất nhiều… nhưng chúng tôi
+                                    khác họ. Chúng tôi không phải
+                                    là “sinh viên kiếm việc làm thêm” như các trung tâm gia sư nhỏ lẻ trên địa bàn Hà
+                                    Nội. Con bạn hoàn toàn có thể học tốt lên chỉ là bạn chưa chọn đúng gia sư phù hợp
+                                    cho con thôi.</p>
+
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Đội ngũ gia sư Quốc Tử Giám hiểu rằng chúng tôi là người mà
+                                    phụ huynh gửi gắm kỳ vọng.
+                                    bằng kinh nghiệm chuyên môn, lòng yêu nghề chúng tôi khẳng định con bạn chắc chắn sẽ
+                                    tiến bộ rõ rệt sau 15 buổi học, nếu không trung tâm sẽ không thu học phí".</p>
+
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đừng do dự hãy nhấc máy lên gọi cho chúng tôi. Đầu tư
+                                    học tập là đầu tư thông minh
+                                    cho tương lai con em của bạn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #F6F6F6">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col-12">
+                        <div class="call-to-action text-center">
+                            <h5 class="mb-3">Gọi ngay để được tư vấn</h5>
+                            <a href="tel:0383070388">038.307.0388</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section> -->
+
+        <section class="album pt-5 pb-5" style="background: #F7F7F7;">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h4 style="color: var(--main-color)">DANH MỤC GIA SƯ</h4>
+                        <img class="img-fluid"
+                            src="http://giasutamduc.net/wp-content/themes/giasuhoangyen/images/arrow.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel two owl-theme text-red">
+
+                            <% parentCategories.forEach(function(category){  %>
+                                <div class="item">
+                                        <img class="image-card img-fluid"
+                                            src="<%= category.image %>" alt="Gia sư cấp 2">
+                                        <div class="album-title">
+                                            <h5><a href="/category/<%= category.id %>"
+                                                    title="Gia sư năng khiếu"><%= category.name %></a></h5>
+                                        </div>
+                                    </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5" style="background: #F7F7F7;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 style="color: var(--main-color);">THƯ VIỆN ẢNH GIA SƯ</h4>
+                        <img class="img-fluid"
+                            src="http://giasutamduc.net/wp-content/themes/giasuhoangyen/images/arrow.png" alt="">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel one owl-theme text-red">
+                                <% categories.forEach(function(category){  %>
+                                    <div class="item">
+                                            <img class="image-card img-fluid"
+                                                src="<%= category.image %>" alt="Gia sư cấp 2">
+                                            <div class="album-title">
+                                                <h5><a href="/<%= category.id %>"
+                                                        title="Gia sư năng khiếu"><%= category.name %></a></h5>
+                                            </div>
+                                        </div>
+                                <% }) %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="call-to-action text-center">
+                            <h5 class="mb-3">Gọi ngay để được tư vấn</h5>
+                            <a href="tel:0383070388">038.307.0388</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- END MAIN -->
+
+    <%- include('footer', { categories: categories }); %>
+
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel.one').owlCarousel({
+                loop: true,
+                nav: false,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 4,
+                    }
+                }
+            })
+
+            setInterval(() => {
+                $('.owl-carousel.one').trigger('next.owl')
+            }, 5000)
+
+            $('.owl-carousel.two').owlCarousel({
+                loop: true,
+                nav: false,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 4,
+                    }
+                }
+            })
+
+            setInterval(() => {
+                $('.owl-carousel.two').trigger('next.owl')
+            }, 4500)
+        });
+    </script>
+</body>
+
+</html>
