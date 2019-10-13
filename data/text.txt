@@ -1,7 +1,7 @@
-Tâm Đức => Quốc Tử Giám
+Tâm Đức => cao cấp Bảo Trang
 img-responsive => img-fluid
-Thăng Long Hà Nội => Quốc Tử Giám
-Thăng Long => Quốc Tử Giám
+Thăng Long Hà Nội => cao cấp Bảo Trang
+Thăng Long => cao cấp Bảo Trang
 
 
 0976.433.032 => 038.307.0388
