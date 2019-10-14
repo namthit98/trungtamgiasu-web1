@@ -10,7 +10,7 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res, next) => {
-    res.render('index', { categories: categoryData, parentCategories: categoryParentData, active: 'home' })
+    return res.render('index', { categories: categoryData, parentCategories: categoryParentData, active: 'home' })
 })
 
 app.get('/lien-he', (req, res, next) => {
