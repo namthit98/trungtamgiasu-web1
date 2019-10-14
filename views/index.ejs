@@ -511,7 +511,12 @@
     <div class="banner container-fluid">
         <div class="row justify-content-center mt-lg-2">
             <div class="col-12 col-lg-9">
-                <img class="img-fluid" src="http://giasutamduc.net/wp-content/uploads/2018/03/gs.png" alt="banner">
+                <div class="pt-3 pb-3" style="background: url('/images/banner.png');background-size: cover;">
+                    <h3 style="color: #EC0938;font-weight: bold;font-size: 35px;margin-left: 250px;">LIÊN HỆ TÌM GIA SƯ TẠI NHÀ MIỄN PHÍ !</h3>
+                    <h3 style="color: white;font-weight: bold;font-size: 30px;margin-left: 356px;margin-bottom: 15px;">MIỄN PHÍ HỌC THỬ 2 BUỔI</h3>
+                    <h3 style="color: #FFF146;font-weight: bold;font-size: 30px;border-radius: 5px;border: 1px solid #FFF146;display: inline;margin-left: 53px;padding: 7px;">GIA SƯ NAM-NỮ KINH NGHIỆM, HỌC PHÍ CHỈ TỪ 80K - 2 GIỜ TẠI NHÀ</h3>
+                    <h3 style="color: #2694DC;font-weight: bold;font-size: 25px;margin-top: 20px;margin-left: 314px;">GỌI NGAY ĐỂ NHẬN TƯ VẤN MIỄN PHÍ</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -768,6 +773,9 @@
     <script src="/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('#messenger').tooltip()
+            $('#zalo').tooltip()
+            
             $('.owl-carousel.one').owlCarousel({
                 loop: true,
                 nav: false,
